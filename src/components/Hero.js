@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import psicologaImage from '../psicologa.png';
+import psicologaImage from '../psicologa.jpg';
 
 const Hero = () => {
   const introText = "Olá! Eu sou a Dra. Mariana Silva, psicóloga dedicada ao seu bem-estar.";
