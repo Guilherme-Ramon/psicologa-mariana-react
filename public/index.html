@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#5D6BFF" />
+    <title>Dra. Mariana Silva | Psicóloga Clínica e Terapia Online</title>
+
+    <meta
+      name="description"
+      content="Dra. Mariana Silva: Psicóloga clínica especializada em ansiedade, depressão e desenvolvimento pessoal. Oferece terapia individual e online para uma vida equilibrada e bem-estar."
+    />
+    <link rel="apple-touch-icon" href="logo" />
+    <link rel="manifest" href="manifest.json" />
+    <meta property="og:title" content="Dra. Mariana Silva | Psicóloga Clínica e Terapia Online" />
+    <meta property="og:description" content="Psicóloga especializada em bem-estar emocional, ansiedade, depressão e autoconhecimento. Agende sua consulta online ou presencial." />
+    <meta property="og:image" content="og-image.jpg" />
+    <meta property="og:url" content="https://seusite.com.br" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <style>
+      #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f9f9ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+
+      #loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #5d6bff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1.5s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Você precisa habilitar o JavaScript para rodar esta aplicação.</noscript>
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+    </div>
+
+    <div id="root"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const rootElement = document.getElementById('root');
+        const loaderWrapper = document.getElementById('loader-wrapper');
+
+        const observer = new MutationObserver(function(mutationsList, observer) {
+          if (rootElement.children.length > 0) {
+            loaderWrapper.classList.add('hidden');
+            observer.disconnect();
+            loaderWrapper.addEventListener('transitionend', () => loaderWrapper.remove());
+          }
+        });
+
+        observer.observe(rootElement, { childList: true });
+      });
+    </script>
+  </body>
+</html>

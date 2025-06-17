@@ -1,0 +1,26 @@
+{
+  "short_name": "Dra. Mariana",
+  "name": "Dra. Mariana Silva | Psicóloga Clínica",
+  "description": "Site oficial da Dra. Mariana Silva, psicóloga clínica especializada em bem-estar e saúde mental. Agende sua consulta online.",
+  "icons": [
+    {
+      "src": "public/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/public/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#A6B1E1",
+  "background_color": "#F9F9FF"
+}
