@@ -86,8 +86,15 @@ const Hero = () => {
             <img src={psicologaImage} alt="Foto da Dra. Mariana Silva" className="img-fluid hero-img-custom" />
           </div>
           <div className="col-md-7 text-center text-md-start">
-            {isDesktop.current && <p className="hero-intro-text mb-2">{introText}</p>}
-            <h2 className="hero-animated-text">{displayedText} {isDesktop.current && isTyping && charIndex < fullText.length ? <span className="blinking-cursor">|</span> : ''}</h2>
+            <p className="hero-intro-text mb-2">{introText}</p>
+            <h2 className="hero-animated-text">
+              {displayedText}{' '}
+              {isDesktop.current && isTyping && charIndex < fullText.length ? (
+                <span className="blinking-cursor">|</span>
+              ) : (
+                ''
+              )}
+            </h2>
             <a href="#contato" className="btn btn-primary mt-3">Agende sua consulta</a>
           </div>
         </div>
